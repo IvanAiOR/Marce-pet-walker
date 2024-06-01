@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Adamys
+    default: Adamys Pet Walker - Servicios de Paseo, Cuidado y Educación Canina Personalizado
     template: '%s — AstroWind'
   description: 'Adamys Pet Walker ofrece servicios de paseos personalizados y cuidado canino para mantener a tu perro activo, feliz y bien entrenado. Contáctame para agendar un paseo o para obtener más información sobre los servicios ofrecidos.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Adamys
+    site_name: Adamys Pet Walker - Servicios de Paseo, Cuidado y Educación Canina Personalizado
     images:
       - url: '~/assets/images/marc-ada.png'
         width: 1200
@@ -66,7 +66,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+      id: G-ZQ95VRKH1L # or "G-XXXXXXXXXX"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
