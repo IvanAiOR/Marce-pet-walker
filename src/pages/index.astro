@@ -6,10 +6,18 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Content from '~/components/widgets/Content.astro';
+import type { MetaData } from '~/types';
+import configBuilder from 'vendor/integration/utils/configBuilder';
+import loadConfig from 'vendor/integration/utils/loadConfig';
+const _themeConfig = 'src/config.yaml';
 
-const metadata = {
+const rawJsonConfig = await loadConfig(_themeConfig);
+const { SITE, I18N, METADATA, APP_BLOG, UI, ANALYTICS } = configBuilder(rawJsonConfig as any);
+const metadata: MetaData = {
   title: 'Adamys Pet Walker - Servicios para paseadores de perros',
   ignoreTitleTemplate: true,
+  description:
+    'Adamys Pet Walker ofrece servicios de paseos personalizados y divertidos, cuidado y atención personalizada, y educación canina para mantener a tu perro activo, feliz y bien entrenado. Contáctame para agendar un paseo o para obtener más información sobre los servicios ofrecidos. Visita mis redes sociales para obtener consejos e información sobre cómo mantener a tu perro feliz y saludable.',
 };
 ---
 
